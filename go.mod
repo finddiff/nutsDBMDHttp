@@ -3,7 +3,7 @@ module nutsDBMDHttp
 go 1.18
 
 require (
-	github.com/finddiff/nutsDBMD v0.1.30
+	github.com/finddiff/nutsDBMD v0.1.34
 	github.com/gin-gonic/gin v1.8.1
 )
 
@@ -31,3 +31,5 @@ require (
 	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
+
+//replace github.com/finddiff/nutsDBMD => E:/oprojects/nutsDBMD v0.1.31
