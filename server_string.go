@@ -370,3 +370,21 @@ func (s *NutsHTTPServer) DeleteOldFiles(c *gin.Context) {
 	}
 	WriteSucc(c, struct{}{})
 }
+
+func (s *NutsHTTPServer) DeleteAllOldFiles(c *gin.Context) {
+	var (
+		err error
+	)
+
+	err = s.core.DeleteAllOldFiles()
+	if err != nil {
+		switch err {
+		case nutsdb.ErrNotFoundKey:
+			WriteError(c, ErrKeyNotFoundInBucket)
+		default:
+			WriteError(c, ErrUnknown)
+		}
+		return
+	}
+	WriteSucc(c, struct{}{})
+}

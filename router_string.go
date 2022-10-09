@@ -16,4 +16,6 @@ func (s *NutsHTTPServer) initStringRouter() {
 	sr.GET("scan/:bucket/:scanType", s.Scan)
 
 	sr.GET("removefiles/:count", s.DeleteOldFiles)
+
+	sr.GET("delivaldallfiles/", s.DeleteAllOldFiles)
 }

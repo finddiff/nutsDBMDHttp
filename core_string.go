@@ -116,3 +116,8 @@ func (c *core) DeleteOldFiles(count int) (err error) {
 	err = c.db.DeleteOldFiles(count)
 	return err
 }
+
+func (c *core) DeleteAllOldFiles() (err error) {
+	err = c.db.DeleteAllOldFiles()
+	return err
+}

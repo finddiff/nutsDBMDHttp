@@ -3,7 +3,7 @@ module nutsDBMDHttp
 go 1.18
 
 require (
-	github.com/finddiff/nutsDBMD v0.1.34
+	github.com/finddiff/nutsDBMD v0.1.37
 	github.com/gin-gonic/gin v1.8.1
 )
 
